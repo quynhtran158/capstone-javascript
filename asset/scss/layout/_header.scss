@@ -1,5 +1,17 @@
 .header {
     color: #fff;
+    &#admin-header {
+        background: $bg-color;
+        a {
+            color: #fff;
+            &:hover {
+                color: #000;
+            }
+        }
+        .navbar-light .navbar-toggler {
+            border-color: #fff;
+        }
+    }
     &#customer-header {
         background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../../../asset/img/customer-banner.jpg");
         background-size: cover;
@@ -16,22 +28,22 @@
         img {
             width: 100%;
         }
-    }
-    .navbar-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: transparent;
-        &.scroll {
-            background: rgba(0, 0, 0, 0.5);
+        .navbar-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            &.scroll {
+                background: rgba(0, 0, 0, 0.5);
+            }
         }
-    }
-    a.navbar-brand, i, span, p {
-        color: #fff;
-    }
-    h1 {
-        font-size: 70px;
-        font-weight: 300;
-    }
+        a.navbar-brand, i, span, p {
+            color: #fff;
+        }
+        h1 {
+            font-size: 70px;
+            font-weight: 300;
+        }
+    }    
 }

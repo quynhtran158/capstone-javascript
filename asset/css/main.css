@@ -56,6 +56,14 @@ a:hover {
   color: black;
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+}
+
 #body {
   margin: 0 auto;
   width: 100vw;
@@ -91,6 +99,18 @@ a:hover {
 .header {
   color: #fff;
 }
+.header#admin-header {
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+}
+.header#admin-header a {
+  color: #fff;
+}
+.header#admin-header a:hover {
+  color: #000;
+}
+.header#admin-header .navbar-light .navbar-toggler {
+  border-color: #fff;
+}
 .header#customer-header {
   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../../../asset/img/customer-banner.jpg");
   background-size: cover;
@@ -108,20 +128,100 @@ a:hover {
 .header#customer-header img {
   width: 100%;
 }
-.header .navbar-container {
+.header#customer-header .navbar-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: transparent;
 }
-.header .navbar-container.scroll {
+.header#customer-header .navbar-container.scroll {
   background: rgba(0, 0, 0, 0.5);
 }
-.header a.navbar-brand, .header i, .header span, .header p {
+.header#customer-header a.navbar-brand, .header#customer-header i, .header#customer-header span, .header#customer-header p {
   color: #fff;
 }
-.header h1 {
+.header#customer-header h1 {
   font-size: 70px;
   font-weight: 300;
+}
+
+.footer#admin-footer {
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+  color: #fff;
+}
+.footer#admin-footer a {
+  color: #fff;
+}
+.footer#admin-footer a, .footer#admin-footer p, .footer#admin-footer span {
+  line-height: 40px;
+}
+.footer#admin-footer #footer-links {
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+}
+
+.header {
+  color: #fff;
+}
+.header#admin-header {
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+}
+.header#admin-header a {
+  color: #fff;
+}
+.header#admin-header a:hover {
+  color: #000;
+}
+.header#admin-header .navbar-light .navbar-toggler {
+  border-color: #fff;
+}
+.header#customer-header {
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("../../../asset/img/customer-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.header#customer-header .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header#customer-header .nav-link i {
+  font-size: 20px;
+}
+.header#customer-header img {
+  width: 100%;
+}
+.header#customer-header .navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+.header#customer-header .navbar-container.scroll {
+  background: rgba(0, 0, 0, 0.5);
+}
+.header#customer-header a.navbar-brand, .header#customer-header i, .header#customer-header span, .header#customer-header p {
+  color: #fff;
+}
+.header#customer-header h1 {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.footer#admin-footer {
+  background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+  color: #fff;
+}
+.footer#admin-footer a {
+  color: #fff;
+}
+.footer#admin-footer a, .footer#admin-footer p, .footer#admin-footer span {
+  line-height: 40px;
+}
+.footer#admin-footer #footer-links {
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
 }/*# sourceMappingURL=main.css.map */
