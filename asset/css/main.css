@@ -146,17 +146,17 @@ li {
   font-weight: 300;
 }
 
-.footer#admin-footer {
+.footer {
   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
   color: #fff;
 }
-.footer#admin-footer a {
+.footer a {
   color: #fff;
 }
-.footer#admin-footer a, .footer#admin-footer p, .footer#admin-footer span {
+.footer a, .footer p, .footer span {
   line-height: 40px;
 }
-.footer#admin-footer #footer-links {
+.footer #footer-links {
   border-top: 1px #fff solid;
   border-bottom: 1px #fff solid;
 }
@@ -211,17 +211,17 @@ li {
   font-weight: 300;
 }
 
-.footer#admin-footer {
+.footer {
   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
   color: #fff;
 }
-.footer#admin-footer a {
+.footer a {
   color: #fff;
 }
-.footer#admin-footer a, .footer#admin-footer p, .footer#admin-footer span {
+.footer a, .footer p, .footer span {
   line-height: 40px;
 }
-.footer#admin-footer #footer-links {
+.footer #footer-links {
   border-top: 1px #fff solid;
   border-bottom: 1px #fff solid;
 }/*# sourceMappingURL=main.css.map */
