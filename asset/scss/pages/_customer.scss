@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px;
+    margin-bottom: 0px;
+    background: #f7f7f7;
+    color: #212529;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    padding-right: .75rem;
+    padding-left:  .75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row>*{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 0;
+}
+
+.card{
+    border: solid 1px rgb(238, 238, 238);
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff ;
+    transition: .3s all ease-in-out;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    word-wrap: break-word;
+}
+
+.card .content-overlay{
+    position: absolute;
+    
+}
+

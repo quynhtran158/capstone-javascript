@@ -1,37 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Capstone JS - Customer page</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link rel="stylesheet" href="../../asset/css/main.css" />
-  </head>
-  <body>
-    <section class="header" id="customer-header"></section>
-    <section class="body" id="customer-body"></section>
-    <section class="footer" id="customer-footer"></section>
+<head>
+  <title>Capstone JS - Customer page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+
+  <!-- tailwind -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"
+    integrity="sha512-braXHF1tCeb8MzPktmUHhrjZBSZknHvjmkUdkAbeqtIrWwCchhcpUeAf2Sq3yIq1Q1x5PlroafjceOUbIE3Q5g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- my css -->
+  <link rel="stylesheet" href="../../asset/css/main.css" />
+</head>
+
+<body>
+  <section class="header" id="customer-header"></section>
+
+
+  <section class="body" id="customer-body">
+    <div class="container" id="content-wrap">
+      <main role="main" class="pb-5 mb-5 ">
+        <div class="container">
+          <div class="my-5">
+            <div class="container">
+              <select class="form-select w-25 mb-5" name="" id="selectList" class="form-control">
+                <option>All brands</option>
+                <option>Apple</option>
+                <option>Samsung</option>
+              </select>
+            </div>
+
+            <div class="row mx-0 gy-4" id="phoneList">
+              <div class="col-lg-3 col-md-6">
+                <div class="flex card h-100">
+                  <div class="content-overlay"></div>
+                  <img src="../../asset/img/ip13.jpg" alt="">
+                  <div class="content-details fadeIn-top">
+                    <h3 class="pb-5">Specifications</h3>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Screen:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- screen lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Back camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- backCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Front camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- frontCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <p class="pt-5">
+                      <u>Click here for more details</u>
+                    </p>
+              
+                  </div>
+                  <div class="card-body">
+                    <div class="mt-3 brand text-center"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <button type="button" class="flex btn btn-block w-50" onclick="addToCart()">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="flex card h-100">
+                  <div class="content-overlay"></div>
+                  <img src="../../asset/img/ip15.jpg" alt="">
+                  <div class="content-details fadeIn-top">
+                    <h3 class="pb-5">Specifications</h3>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Screen:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- screen lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Back camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- backCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Front camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- frontCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <p class="pt-5">
+                      <u>Click here for more details</u>
+                    </p>
+              
+                  </div>
+                  <div class="card-body">
+                    <div class="mt-3 brand text-center"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <button type="button" class="flex btn btn-block w-50" onclick="addToCart()">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="flex card h-100">
+                  <div class="content-overlay"></div>
+                  <img src="../../asset/img/ip15.jpg" alt="">
+                  <div class="content-details fadeIn-top">
+                    <h3 class="pb-5">Specifications</h3>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Screen:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- screen lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Back camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- backCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Front camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- frontCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <p class="pt-5">
+                      <u>Click here for more details</u>
+                    </p>
+              
+                  </div>
+                  <div class="card-body">
+                    <div class="mt-3 brand text-center"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <button type="button" class="flex btn btn-block w-50" onclick="addToCart()">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-3 col-md-6">
+                <div class="flex card h-100">
+                  <div class="content-overlay"></div>
+                  <img src="../../asset/img/ip13.jpg" alt="">
+                  <div class="content-details fadeIn-top">
+                    <h3 class="pb-5">Specifications</h3>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Screen:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- screen lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Back camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- backCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start py-1">
+                      <span class="text-light">
+                        <b>Front camera:</b>
+                      </span>
+                      <span class="text-light">
+                        <!-- frontCamera lấy từ API -->
+                      </span>
+                    </div>
+                    <p class="pt-5">
+                      <u>Click here for more details</u>
+                    </p>
+              
+                  </div>
+                  <div class="card-body">
+                    <div class="mt-3 brand text-center"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <div class="d-flex justify-content-start pt-3"></div>
+                    <button type="button" class="flex btn btn-block w-50" onclick="addToCart()">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+
+
+  <section class="footer" id="customer-footer"></section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- axios API -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- controller js -->
+  <script src="../view/controller/controller.js"></script>
+  <!-- my main js -->
+  <script src="../view/controller/main.js"></script>
+</body>
+
 </html>
