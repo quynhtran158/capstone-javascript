@@ -165,6 +165,20 @@ li {
   border-bottom: 1px #fff solid;
 }
 
+.body#admin-body .title {
+  background: rgba(29, 38, 113, 0.7);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+.body#admin-body .title button {
+  background: #17a2b8;
+  color: #fff;
+}
+.body#admin-body .title button:hover {
+  background: #fff;
+  color: #17a2b8;
+}
+
 .header {
   position: relative;
   color: #fff;
