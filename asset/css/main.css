@@ -88,7 +88,7 @@ a:hover {
   font-size: 100px;
 }
 
-* {
+*, ::after, ::before {
   box-sizing: border-box;
 }
 
@@ -138,4 +138,32 @@ body {
 
 .card .content-overlay {
   position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.card:hover .content-overlay {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.content-overlay .btn {
+  position: absolute;
+  background-color: #daa300;
+  top: 70%;
+  left: 25%;
+}
+
+.card-body {
+  padding-bottom: 0;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }/*# sourceMappingURL=main.css.map */

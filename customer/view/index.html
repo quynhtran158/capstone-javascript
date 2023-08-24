@@ -8,7 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 
-
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- tailwind -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"
     integrity="sha512-braXHF1tCeb8MzPktmUHhrjZBSZknHvjmkUdkAbeqtIrWwCchhcpUeAf2Sq3yIq1Q1x5PlroafjceOUbIE3Q5g=="
@@ -34,51 +37,79 @@
               </select>
             </div>
 
+            <!-- card container -->
             <div class="row mx-0 gy-4" id="phoneList">
+              <!-- 1st card -->
               <div class="col-lg-3 col-md-6">
                 <div class="flex card h-100">
-                  <div class="content-overlay"></div>
-                  <img src="../../asset/img/ip13.jpg" alt="">
-                  <div class="content-details fadeIn-top">
-                    <h3 class="pb-5">Specifications</h3>
-                    <div class="d-flex justify-content-start py-1">
-                      <span class="text-light">
-                        <b>Screen:</b>
-                      </span>
-                      <span class="text-light">
-                        <!-- screen lấy từ API -->
-                      </span>
+                  <div class="content-overlay ">
+                    <div class="content-details  fadeIn-top">
+                      <h3 class="pb-5">Specifications</h3>
+                      <div class="d-flex justify-content-start py-1">
+                        <span class="text-light">
+                          <b>Screen:</b>
+                        </span>
+                        <span class="text-light">
+                          <!-- screen lấy từ API -->
+                        </span>
+                      </div>
+                      <div class="d-flex justify-content-start py-1">
+                        <span class="text-light">
+                          <b>Back camera:</b>
+                        </span>
+                        <span class="text-light">
+                          <!-- backCamera lấy từ API -->
+                        </span>
+                      </div>
+                      <div class="d-flex justify-content-start py-1">
+                        <span class="text-light">
+                          <b>Front camera:</b>
+                        </span>
+                        <span class="text-light">
+                          <!-- frontCamera lấy từ API -->
+                        </span>
+                      </div>
+                      <p class="more-details pt-5 text-light text-center">
+                        <u>Click here for more details</u>
+                      </p>
+                      <button type="button" class="flex btn btn-block w-50" onclick="addToCart()">Add to cart</button>
                     </div>
-                    <div class="d-flex justify-content-start py-1">
-                      <span class="text-light">
-                        <b>Back camera:</b>
-                      </span>
-                      <span class="text-light">
-                        <!-- backCamera lấy từ API -->
-                      </span>
-                    </div>
-                    <div class="d-flex justify-content-start py-1">
-                      <span class="text-light">
-                        <b>Front camera:</b>
-                      </span>
-                      <span class="text-light">
-                        <!-- frontCamera lấy từ API -->
-                      </span>
-                    </div>
-                    <p class="pt-5">
-                      <u>Click here for more details</u>
-                    </p>
-              
                   </div>
+
+                  <img src="../../asset/img/ip13.jpg" alt="">
+
                   <div class="card-body">
-                    <div class="mt-3 brand text-center"></div>
-                    <div class="d-flex justify-content-start pt-3"></div>
-                    <div class="d-flex justify-content-start pt-3"></div>
-                    <button type="button" class="flex btn btn-block w-50" onclick="addToCart()">Add to cart</button>
+                    <div class="mt-3 brand text-center">
+                      <h5 class="card-title pt-3">Lucy Ochoa</h5>
+                      <span class="text-muted">$200000</span>
+                      <span class="text-danger">$230000</span>
+                    </div>
+                    <div class="brand-box text-center mt-3">
+                      <span>Apple</span>
+                    </div>
+                    <div class="d-flex justify-content-start pt-3">
+                      <span>
+                        <b>Description:</b>
+                        "Echo Taylor"
+                      </span>
+                    </div>
+                    <div class="d-flex justify-content-start pt-3">
+                      <div class="text-warning mr-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <span class="text-success">
+                        <b>In Stock</b>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              <!-- 2nd card -->
               <div class="col-lg-3 col-md-6">
                 <div class="flex card h-100">
                   <div class="content-overlay"></div>
@@ -112,7 +143,7 @@
                     <p class="pt-5">
                       <u>Click here for more details</u>
                     </p>
-              
+
                   </div>
                   <div class="card-body">
                     <div class="mt-3 brand text-center"></div>
@@ -123,6 +154,7 @@
                 </div>
               </div>
 
+              <!-- 3rd card -->
               <div class="col-lg-3 col-md-6">
                 <div class="flex card h-100">
                   <div class="content-overlay"></div>
@@ -156,7 +188,7 @@
                     <p class="pt-5">
                       <u>Click here for more details</u>
                     </p>
-              
+
                   </div>
                   <div class="card-body">
                     <div class="mt-3 brand text-center"></div>
@@ -166,7 +198,8 @@
                   </div>
                 </div>
               </div>
-              
+
+              <!-- 4th card -->
               <div class="col-lg-3 col-md-6">
                 <div class="flex card h-100">
                   <div class="content-overlay"></div>
@@ -200,7 +233,7 @@
                     <p class="pt-5">
                       <u>Click here for more details</u>
                     </p>
-              
+
                   </div>
                   <div class="card-body">
                     <div class="mt-3 brand text-center"></div>
@@ -210,8 +243,8 @@
                   </div>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
       </main>
