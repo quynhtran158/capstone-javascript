@@ -14,6 +14,7 @@ export class Service {
         console.log(err);
       }
     };
+    
     getPhoneById = async (id) => {
       try {
         const res = await axios({
@@ -26,5 +27,5 @@ export class Service {
         console.log(err);
       }
     };
-  }
+}
   
