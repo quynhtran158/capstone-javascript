@@ -186,6 +186,9 @@ li {
   background: #fff;
   color: #17a2b8;
 }
+.body#admin-body #search {
+  border-radius: 5px;
+}
 
 .header {
   position: relative;

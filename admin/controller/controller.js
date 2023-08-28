@@ -1,6 +1,7 @@
 import { Product } from "../model/model.js";
 
 export const BASE_URL = "https://64e41e8fc55563802912cf83.mockapi.io/Products"
+export let PRODUCTS_LIST = []
 
 export let fetchProductList = () => {
     toggleSpinner()
@@ -10,6 +11,7 @@ export let fetchProductList = () => {
             renderProductTable(list)
             console.log(res);
             toggleSpinner()
+            PRODUCTS_LIST = list
         })
         .catch((err) => {
             console.log(err);
@@ -17,9 +19,9 @@ export let fetchProductList = () => {
         });
 }
 
-const renderProductTable = (list) => {
+export const renderProductTable = (list) => {
     let tableHtml = ""
-    list.reverse().forEach(item => {
+    list.forEach(item => {
         tableHtml += `
             <tr>
                 <td>${item.id}</td>
@@ -77,6 +79,7 @@ export let openModal = (state = true) => {
 export let openModalAdd = () => {
     disableButton("updateBtn", false)
     disableButton("addBtn", true)
+    disableInputId(false)
 }
 export let disableInputId = (state = true) => {
     document.getElementById("p-id").disabled = state

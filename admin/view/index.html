@@ -65,6 +65,7 @@
                     class="title d-flex align-items-center justify-content-between p-3"
                 >
                     <h3>Phone Management</h3>
+
                     <button
                         type="button"
                         class="btn"
@@ -75,6 +76,48 @@
                         <i class="fa-solid fa-circle-plus me-2"></i>
                         <span>Add phone</span>
                     </button>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-10 form-group">
+                        <input
+                            type="text"
+                            class="form-control px-3 py-1"
+                            id="search"
+                            placeholder="Tìm kiếm sản phẩm theo tên..."
+                            oninput="search()"
+                        />
+                    </div>
+                    <div class="col-2 d-flex justify-content-end">
+                        <div class="dropdown">
+                            <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                Sort price
+                            </button>
+                            <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton"
+                            >
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="sort(0)"
+                                    >Cao > Thấp</a
+                                >
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="sort(1)"
+                                    >Thấp > Cao</a
+                                >
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <table class="table">
                     <thead>
@@ -216,6 +259,7 @@
                                     id="p-name"
                                     placeholder=""
                                 />
+                                <span class="text-danger" id="name-err"></span>
                             </div>
                             <div class="form-group">
                                 <label for="">Hình ảnh</label>
@@ -225,8 +269,9 @@
                                     id="p-img"
                                     placeholder=""
                                 />
+                                <span class="text-danger" id="img-err"></span>
                             </div>
-                            <div class="input-group mb-3">
+                            <div class="input-group">
                                 <select class="custom-select" id="p-type">
                                     <option disabled selected value="">
                                         Chọn...
@@ -242,7 +287,8 @@
                                     >
                                 </div>
                             </div>
-                            <div class="input-group mb-3">
+                            <p class="text-danger" id="type-err"></p>
+                            <div class="input-group">
                                 <select class="custom-select" id="p-screen">
                                     <option disabled selected value="">
                                         Chọn...
@@ -259,6 +305,7 @@
                                     >
                                 </div>
                             </div>
+                            <p class="text-danger" id="screen-err"></p>
                             <div class="form-group">
                                 <label for="">Camera trước</label>
                                 <input
@@ -267,6 +314,10 @@
                                     id="p-front-camera"
                                     placeholder=""
                                 />
+                                <span
+                                    class="text-danger"
+                                    id="front-camera-err"
+                                ></span>
                             </div>
                             <div class="form-group">
                                 <label for="">Camera sau</label>
@@ -276,6 +327,10 @@
                                     id="p-back-camera"
                                     placeholder=""
                                 />
+                                <span
+                                    class="text-danger"
+                                    id="back-camera-err"
+                                ></span>
                             </div>
                             <div class="form-group">
                                 <label for="">Mô tả</label>
@@ -285,6 +340,7 @@
                                     id="p-desc"
                                     placeholder=""
                                 />
+                                <span class="text-danger" id="desc-err"></span>
                             </div>
                         </div>
                         <div class="modal-footer">
