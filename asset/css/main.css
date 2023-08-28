@@ -96,6 +96,14 @@ li {
   font-size: 100px;
 }
 
+.spinner {
+  background: white;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+}
+
 .header {
   position: relative;
   color: #fff;

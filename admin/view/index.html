@@ -12,6 +12,13 @@
         <link rel="stylesheet" href="../../asset/css/main.css" />
     </head>
     <body>
+        <section
+            class="spinner d-none justify-content-center align-items-center"
+        >
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </section>
         <section class="header" id="admin-header">
             <div class="navbar-container">
                 <nav class="container navbar navbar-expand-lg navbar-light">
@@ -55,10 +62,16 @@
         <section class="body py-5" id="admin-body">
             <div class="container">
                 <div
-                    class="title d-flex align-item-center justify-content-between p-3"
+                    class="title d-flex align-items-center justify-content-between p-3"
                 >
                     <h3>Phone Management</h3>
-                    <button class="btn">
+                    <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        onclick="openModalAdd()"
+                    >
                         <i class="fa-solid fa-circle-plus me-2"></i>
                         <span>Add phone</span>
                     </button>
@@ -160,6 +173,150 @@
             </div>
         </section>
 
+        <!-- Modal -->
+        <section>
+            <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Modal title
+                            </h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">ID</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="p-id"
+                                    placeholder=""
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="">Tên</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="p-name"
+                                    placeholder=""
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="">Hình ảnh</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="p-img"
+                                    placeholder=""
+                                />
+                            </div>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="p-type">
+                                    <option disabled selected value="">
+                                        Chọn...
+                                    </option>
+                                    <option value="Iphone">Iphone</option>
+                                    <option value="Samsung">Samsung</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <label
+                                        class="input-group-text"
+                                        for="inputGroupSelect02"
+                                        >Hãng</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="p-screen">
+                                    <option disabled selected value="">
+                                        Chọn...
+                                    </option>
+                                    <option value="Screen 68">68</option>
+                                    <option value="Screen 69">69</option>
+                                    <option value="Screen 70">70</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <label
+                                        class="input-group-text"
+                                        for="inputGroupSelect02"
+                                        >Kích thước màn hình</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Camera trước</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="p-front-camera"
+                                    placeholder=""
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="">Camera sau</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="p-back-camera"
+                                    placeholder=""
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="">Mô tả</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="p-desc"
+                                    placeholder=""
+                                />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-info d-none"
+                                id="updateBtn"
+                                onclick="update()"
+                            >
+                                Save changes
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-info"
+                                id="addBtn"
+                                onclick="add()"
+                            >
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
@@ -177,6 +334,18 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
         ></script>
+
+        <!-- axios -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+            integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- admin js -->
+        <!-- <script src="../controller/controller.js"></script>
+        <script src="../model/model.js"></script> -->
+        <script type="module" src="../view/main.js"></script>
 
         <!-- index.js -->
         <script src="../../asset/js/index.js"></script>
