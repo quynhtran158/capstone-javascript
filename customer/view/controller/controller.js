@@ -54,14 +54,32 @@ let renderList = (phoneList) => {
   document.getElementById('phoneList').innerHTML = content;
 };
 
-export let fetchPhoneList = () => {
+// export let fetchPhoneList = () => {
+//   axios ({
+//     url: BASE_URL,
+//     method: "GET",
+//   })
+//   .then ((res) => {
+//     renderList(res.data);
+//     console.log("YES");
+//     console.log("file: controller.js:65 ~ .then ~ res:", res);   
+//   })
+//   .catch ((err) => {
+//     console.error ("Error in fetching data from server", err);
+//   })
+// }
+
+export let fetchPhoneList = (brand) => {
   axios ({
     url: BASE_URL,
     method: "GET",
   })
   .then ((res) => {
-    renderList(res.data);
-    console.log("file: controller.js:65 ~ .then ~ res:", res);   
+    let filteredPhones = res.data;
+    if (brand && brand !== 'All brands') {
+      filteredPhones = res.data.filter(phone => phone.type === brand);
+    }
+    renderList(filteredPhones);
   })
   .catch ((err) => {
     console.error ("Error in fetching data from server", err);

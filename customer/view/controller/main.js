@@ -3,9 +3,16 @@ import {Product} from "../model/product.js"
 import {Service} from "../services/phoneService.js"
 import { CartItem } from "../model/cartItem.js";
 
-const service = new Service();
-let cart = [];
-
 import { fetchPhoneList } from "./controller.js";
-
 fetchPhoneList();
+
+// filter theo hãng
+
+document.getElementById('selectList').addEventListener('change', function() {
+    const selectedBrand = this.value; 
+    fetchPhoneList(selectedBrand);
+});
+  
+window.onload = function() {
+    fetchPhoneList();
+  };
