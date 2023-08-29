@@ -1,4 +1,4 @@
-const BASE_URL ="https://64e41e8fc55563802912cf83.mockapi.io/Products";
+const BASE_URL = "https://64e41e8fc55563802912cf83.mockapi.io/Products";
 
 let renderList = (phoneList) => {
   let content = '';
@@ -45,8 +45,7 @@ let renderList = (phoneList) => {
           </div>
           <span class = 'text-success'><b>In Stock</b></span>
         </div>
-        <button type="button" class="btn btn-block w-50" onclick ="btnAddToCart('${ele.id
-      }')">Add to cart</button>
+        <button type="button" class="btn btn-block w-50" onclick ="btnAddToCart('${ele.id}')">Add to cart</button>
       </div>
     </div>
   </div>`;
@@ -70,18 +69,19 @@ let renderList = (phoneList) => {
 // }
 
 export let fetchPhoneList = (brand) => {
-  axios ({
+  axios({
     url: BASE_URL,
     method: "GET",
   })
-  .then ((res) => {
-    let filteredPhones = res.data;
-    if (brand && brand !== 'All brands') {
-      filteredPhones = res.data.filter(phone => phone.type === brand);
-    }
-    renderList(filteredPhones);
-  })
-  .catch ((err) => {
-    console.error ("Error in fetching data from server", err);
-  })
+    .then((res) => {
+      let filteredPhones = res.data;
+      if (brand && brand !== 'All brands') {
+        filteredPhones = res.data.filter(phone => phone.type === brand);
+      }
+      console.log("🚀 ~ file: controller.js:80 ~ .then ~ filteredPhones:", filteredPhones)
+      renderList(filteredPhones);
+    })
+    .catch((err) => {
+      console.error("Error in fetching data from server", err);
+    })
 }
