@@ -48,6 +48,7 @@
 */
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css");
 a {
   text-decoration: none;
   color: black;
@@ -62,6 +63,14 @@ ul {
 
 li {
   list-style: none;
+}
+
+.spinner {
+  background: white;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
 }
 
 #body {
@@ -96,14 +105,6 @@ li {
   font-size: 100px;
 }
 
-.spinner {
-  background: white;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2000;
-}
-
 .header {
   position: relative;
   color: #fff;
@@ -113,7 +114,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .header .navbar-container.scroll {
   background: rgb(36, 36, 36);
@@ -199,7 +200,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .header .navbar-container.scroll {
   background: rgb(36, 36, 36);
@@ -257,6 +258,13 @@ li {
 .footer #footer-links {
   border-top: 1px #fff solid;
   border-bottom: 1px #fff solid;
+}
+
+.cart p {
+  margin-bottom: 0;
+}
+.cart .product {
+  border-bottom: 1px solid #a8a8a8;
 }
 
 *,

@@ -54,9 +54,12 @@
 // @import "./layout/header";
 // @import "./layout/sidebar";
 
+@import "./components/spinner";
+
 @import "./pages/home";
 @import "./pages/admin";
 @import "./pages/customer";
 
 @import "./vendors/bootstrap";
 @import "./vendors/fontAwesome";
+@import "./vendors/toastJs";
