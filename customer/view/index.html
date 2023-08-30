@@ -39,7 +39,7 @@
         <!-- Modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalCenterTitle">
@@ -81,7 +81,10 @@
                             </div> -->
                         </div>
 
-                        <div class="payment-info mb-3">
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="payment-info mb-3 w-100">
                             <p>
                                 Subtotal:
                                 <span id="cart-subtotal"></span>
@@ -91,31 +94,25 @@
                                 <span id="cart-shipping"></span>
                             </p>
                             <p>
-                                Tax (estimated):
+                                VAT 10%:
                                 <span id="cart-tax"></span>
                             </p>
-                            <p>
+                            <p class="text-right text-success font-weight-bold">
                                 Total:
                                 <span id="cart-total"></span>
                             </p>
-                            <i>Estimations based on New York, United
-                                States</i>
+                            <br>
+                            <i>Estimations based on HCM, VN</i>
                         </div>
 
-                        <button class="btn btn-info" onclick="closeCartModal()">
-                            Continue shopping
-                        </button>
-                        <button class="btn btn-danger" onclick="emptyCart()">Empty card</button>
-                        <button class="btn btn-warning" onclick="payCart()">Pay Now</button>
+                        <div class="row justify-content-between w-100">
+                            <button class="btn btn-info mr-2" onclick="closeCartModal()">
+                                Continue shopping
+                            </button>
+                            <button class="btn btn-danger mr-2" onclick="emptyCart()">Empty card</button>
+                            <button class="btn btn-warning mr-2" onclick="payCart()">Pay Now</button>
+                        </div>
                     </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            Save changes
-                        </button>
-                    </div> -->
                 </div>
             </div>
         </div>

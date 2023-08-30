@@ -15,6 +15,10 @@ let cart = new Cart(JSON.parse(cartLocal))
 // update số item trong giỏ hàng
 cart.update()
 
+// testing
+cart.render()
+$('#exampleModalCenter').modal('show')
+
 $('#exampleModalCenter').on('show.bs.modal', () => cart.render())
 window.addItemCart = (id) => cart.addItem(id)
 window.incQuantity = (id) => cart.incItem(id)

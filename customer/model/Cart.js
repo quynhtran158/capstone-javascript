@@ -92,7 +92,7 @@ export class Cart {
                                 alt="" />
                         </div>
                         <div class="col-8">
-                            <b>Tên sản phẩm: ${item.name}</b>
+                            <b>${item.name}</b>
                             <p>Screen: ${item.screen}</p>
                             <p>Back Camera: ${item.backCamera}</p>
                             <p>Front Camera: ${item.frontCamera}</p>
@@ -102,12 +102,12 @@ export class Cart {
                     <div class="quantity row mb-3">
                         <div class="col-8">
                             <span>Quantity:</span>
-                            <i class="fa fa-minus-circle" onclick="decQuantity('${item.id}')"></i>
+                            <i class="fa fa-minus-circle mx-2" onclick="decQuantity('${item.id}')"></i>
                             <span id="item-${item.id}-quantity">${item.quantity}</span>
-                            <i class="fa fa-plus-circle" onclick="incQuantity('${item.id}')"></i>
+                            <i class="fa fa-plus-circle mx-2" onclick="incQuantity('${item.id}')"></i>
                         </div>
-                        <div class="col-4">
-                            <span>$${item.tinhTienSanPham().toLocaleString()}</span>
+                        <div class="col-4 text-right">
+                            <span class="text-success">$${item.tinhTienSanPham().toLocaleString()}</span>
                         </div>
                     </div>
                 </div>
@@ -123,6 +123,7 @@ export class Cart {
         this.CART.forEach(item => {
             subTotal = subTotal + item.tinhTienSanPham()
         });
+        shippingFee = subTotal == 0 ? 0 : shippingFee
         let tax = taxRate * subTotal
         $("#cart-subtotal")[0].innerText = `$${subTotal.toLocaleString()}`
         $("#cart-shipping")[0].innerText = `$${shippingFee}`

@@ -318,6 +318,16 @@ li {
 .cart .product {
   border-bottom: 1px solid #a8a8a8;
 }
+.cart .modal-content {
+  height: 90vh;
+}
+.cart .modal-footer {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cart .quantity i {
+  cursor: pointer;
+}
 
 *,
 ::after,
