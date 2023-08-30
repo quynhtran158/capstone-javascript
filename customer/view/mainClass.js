@@ -1,6 +1,6 @@
-import { Cart } from "./model/Cart.js";
+import { Cart } from "../model/Cart.js";
 
-import { fetchPhoneList } from "./controller/controller.js";
+import { fetchPhoneList } from "../controller/controller.js";
 
 fetchPhoneList()
 
@@ -12,6 +12,8 @@ window.filterBrand = () => {
 
 let cartLocal = localStorage.getItem("cart")
 let cart = new Cart(JSON.parse(cartLocal))
+// update số item trong giỏ hàng
+cart.update()
 
 $('#exampleModalCenter').on('show.bs.modal', () => cart.render())
 window.addItemCart = (id) => cart.addItem(id)

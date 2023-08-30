@@ -125,6 +125,9 @@ li {
 .header .navbar a:hover {
   color: #353535 !important;
 }
+.header .navbar a:hover .count2 {
+  background: #353535 !important;
+}
 .header .navbar .nav-link {
   display: flex;
   flex-direction: column;
@@ -155,6 +158,29 @@ li {
 .header#customer-header h1 {
   font-size: 70px;
   font-weight: 300;
+}
+.header#customer-header .cart-icon {
+  position: relative;
+}
+.header#customer-header .cart-icon .count {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header#customer-header .cart-icon .count .count2 {
+  position: relative;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.header#customer-header .cart-icon .count .count2 #cart-count {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 13px;
 }
 
 .footer {
@@ -211,6 +237,9 @@ li {
 .header .navbar a:hover {
   color: #353535 !important;
 }
+.header .navbar a:hover .count2 {
+  background: #353535 !important;
+}
 .header .navbar .nav-link {
   display: flex;
   flex-direction: column;
@@ -241,6 +270,29 @@ li {
 .header#customer-header h1 {
   font-size: 70px;
   font-weight: 300;
+}
+.header#customer-header .cart-icon {
+  position: relative;
+}
+.header#customer-header .cart-icon .count {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header#customer-header .cart-icon .count .count2 {
+  position: relative;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.header#customer-header .cart-icon .count .count2 #cart-count {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 13px;
 }
 
 .footer {

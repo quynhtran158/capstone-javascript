@@ -1,5 +1,5 @@
 import { CartItem } from "./CartItem.js";
-import { toggleSpinner } from "../../../admin/controller/controller.js";
+import { toggleSpinner } from "../../admin/controller/controller.js";
 import { showNoti } from "../services/toast.js";
 import { BASE_URL } from "../controller/controller.js";
 
@@ -68,6 +68,9 @@ export class Cart {
     }
     update() {
         localStorage.setItem("cart", JSON.stringify(this.CART))
+        let countItem = this.countItem()
+        $(".count")[0].style.display = countItem > 0 ? "block" : "none"
+        $("#cart-count")[0].innerText = countItem > 0 ? countItem : ""
     }
     empty = () => {
         this.CART = []
@@ -78,7 +81,7 @@ export class Cart {
     findIndex(id) {
         return this.CART.findIndex((product) => product.id == id)
     }
-    render = (cart) => {
+    render = () => {
         let contentHtml = ""
         this.CART.forEach(item => {
             contentHtml += /*html*/`
@@ -121,10 +124,10 @@ export class Cart {
             subTotal = subTotal + item.tinhTienSanPham()
         });
         let tax = taxRate * subTotal
-        $("#cart-subtotal")[0].innerText = `$${subTotal}`
+        $("#cart-subtotal")[0].innerText = `$${subTotal.toLocaleString()}`
         $("#cart-shipping")[0].innerText = `$${shippingFee}`
-        $("#cart-tax")[0].innerText = `$${tax}`
-        $("#cart-total")[0].innerText = `$${subTotal + tax + shippingFee}`
+        $("#cart-tax")[0].innerText = `$${tax.toLocaleString()}`
+        $("#cart-total")[0].innerText = `$${(subTotal + tax + shippingFee).toLocaleString()}`
     }
     removeItem = (id) => {
         let index = this.findIndex(id)
@@ -146,5 +149,10 @@ export class Cart {
     }
     closeModal = () => {
         $('#exampleModalCenter').modal('hide')
+    }
+    countItem = () => {
+        let sum = 0
+        this.CART.forEach(product => sum = sum + product.quantity)
+        return sum
     }
 }

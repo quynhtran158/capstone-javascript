@@ -4,27 +4,27 @@ export const BASE_URL = "https://64e41e8fc55563802912cf83.mockapi.io/Products";
 
 // fetch theo filter: phone.type
 export const fetchPhoneList = (brand) => {
-	toggleSpinner()
-	axios.get(BASE_URL)
-		.then((res) => {
-			let filteredPhones = res.data;
-			if (brand && brand !== 'All brands') {
-				filteredPhones = filteredPhones.filter(phone => phone.type === brand);
-			}
-			console.log("🚀 ~ file: controller.js:80 ~ .then ~ filteredPhones:", filteredPhones)
-			renderList(filteredPhones);
-			toggleSpinner()
-		})
-		.catch((err) => {
-			console.error("Error in fetching data from server", err);
-			toggleSpinner()
-		})
+    toggleSpinner()
+    axios.get(BASE_URL)
+        .then((res) => {
+            let filteredPhones = res.data;
+            if (brand && brand !== 'All brands') {
+                filteredPhones = filteredPhones.filter(phone => phone.type === brand);
+            }
+            console.log("🚀 ~ file: controller.js:80 ~ .then ~ filteredPhones:", filteredPhones)
+            renderList(filteredPhones);
+            toggleSpinner()
+        })
+        .catch((err) => {
+            console.error("Error in fetching data from server", err);
+            toggleSpinner()
+        })
 }
 
 const renderList = (phoneList) => {
-	let content = '';
-	phoneList.forEach((ele) => {
-		content += /*html */`
+    let content = '';
+    phoneList.forEach((ele) => {
+        content += /*html */`
     <div class="col-lg-3 col-md-6 mb-4">
         <div class="card text-black h-100">
             <div class="content-overlay"></div>
@@ -47,8 +47,8 @@ const renderList = (phoneList) => {
             <div class="card-body">
                 <div class="text-center">
                     <h5 class="card-title pt-3">${ele.name}</h5>
-                    <span class="text-muted mb-2">$${ele.price}</span>
-                    <span class="text-danger"><s>$${Number(ele.price) + 300}</s></span>
+                    <span class="text-muted mb-2">$${ele.price.toLocaleString()}</span>
+                    <span class="text-danger"><s>$${(Number(ele.price) + 300).toLocaleString()}</s></span>
                 </div>
                 <div class="mt-3 brand-box text-center">
                     <span>${ele.type}</span>
@@ -70,6 +70,6 @@ const renderList = (phoneList) => {
             </div>
         </div>
     </div>`;
-	});
-	document.getElementById('phoneList').innerHTML = content;
+    });
+    document.getElementById('phoneList').innerHTML = content;
 }
