@@ -1,137 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Capstone JS - Admin page</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <link rel="stylesheet" href="../../asset/css/main.css" />
-    </head>
-    <body>
-        <section
-            class="spinner d-none justify-content-center align-items-center"
-        >
-            <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </section>
-        <section class="header" id="admin-header">
-            <div class="navbar-container">
-                <nav class="container navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">Capstone JSS</a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarTogglerDemo02"
-                        aria-controls="navbarTogglerDemo02"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarTogglerDemo02"
-                    >
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li class="nav-item active mx-3">
-                                <a class="nav-link" href="../../index.html">
-                                    <i class="fa fa-home"></i>
-                                    <span>Home</span>
-                                </a>
-                            </li>
-                            <li class="nav-item mx-3">
-                                <a
-                                    class="nav-link"
-                                    href="../../customer/view/index.html"
-                                >
-                                    <i class="fa fa-user"></i>
-                                    <span>Customer</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </section>
-        <section class="body py-5" id="admin-body">
-            <div class="container">
-                <div
-                    class="title d-flex align-items-center justify-content-between p-3"
-                >
-                    <h3>Phone Management</h3>
+<head>
+    <title>Capstone JS - Admin page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-                    <button
-                        type="button"
-                        class="btn"
-                        data-toggle="modal"
-                        data-target="#exampleModal"
-                        onclick="openModalAdd()"
-                    >
-                        <i class="fa-solid fa-circle-plus me-2"></i>
-                        <span>Add phone</span>
-                    </button>
+    <link rel="stylesheet" href="../../asset/css/main.css" />
+</head>
+
+<body>
+    <section class="spinner d-none justify-content-center align-items-center">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </section>
+    <section class="header" id="admin-header">
+        <div class="navbar-container">
+            <nav class="container navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">Capstone JSS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active mx-3">
+                            <a class="nav-link" href="../../index.html">
+                                <i class="fa fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="../../customer/view/index.html">
+                                <i class="fa fa-user"></i>
+                                <span>Customer</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-10 form-group">
-                        <input
-                            type="text"
-                            class="form-control px-3 py-1"
-                            id="search"
-                            placeholder="Tìm kiếm sản phẩm theo tên..."
-                            oninput="search()"
-                        />
-                    </div>
-                    <div class="col-2 d-flex justify-content-end">
-                        <div class="dropdown">
-                            <button
-                                class="btn btn-secondary dropdown-toggle"
-                                type="button"
-                                id="dropdownMenuButton"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                            >
-                                Sort price
-                            </button>
-                            <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton"
-                            >
-                                <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="sort(0)"
-                                    >Cao > Thấp</a
-                                >
-                                <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="sort(1)"
-                                    >Thấp > Cao</a
-                                >
-                            </div>
+            </nav>
+        </div>
+    </section>
+    <section class="body py-5" id="admin-body">
+        <div class="container">
+            <div class="title d-flex align-items-center justify-content-between p-3">
+                <h3>Phone Management</h3>
+
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"
+                    onclick="openModalAdd()">
+                    <i class="fa-solid fa-circle-plus me-2"></i>
+                    <span>Add phone</span>
+                </button>
+            </div>
+            <div class="row mt-3">
+                <div class="col-10 form-group">
+                    <input type="text" class="form-control px-3 py-1" id="search"
+                        placeholder="Tìm kiếm sản phẩm theo tên..." oninput="search()" />
+                </div>
+                <div class="col-2 d-flex justify-content-end">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort price
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" onclick="sort(0)">Cao > Thấp</a>
+                            <a class="dropdown-item" href="#" onclick="sort(1)">Thấp > Cao</a>
                         </div>
                     </div>
                 </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Photo</th>
-                            <th scope="col">Discription</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <!-- <tr>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Discription</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr>
                             <th>3</th>
                             <td>Mark</td>
                             <td>Otto</td>
@@ -139,271 +92,190 @@
                             <td>Otto</td>
                             <td>@mdo</td>
                         </tr> -->
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="footer" id="admin-footer">
+        <div class="container">
+            <div class="row justify-content-center pt-3">
+                <p>Get connected with us on social networks:</p>
+                <span class="mx-2"><i class="fab fa-facebook"></i></span>
+                <span class="mx-2"><i class="fab fa-twitter"></i></span>
+                <span class="mx-2"><i class="fab fa-google"></i></span>
+                <span class="mx-2"><i class="fab fa-instagram"></i></span>
+                <span class="mx-2"><i class="fab fa-linkedin"></i></span>
+                <span class="mx-2"><i class="fab fa-github"></i></span>
             </div>
-        </section>
-        <section class="footer" id="admin-footer">
-            <div class="container">
-                <div class="row justify-content-center pt-3">
-                    <p>Get connected with us on social networks:</p>
-                    <span class="mx-2"><i class="fab fa-facebook"></i></span>
-                    <span class="mx-2"><i class="fab fa-twitter"></i></span>
-                    <span class="mx-2"><i class="fab fa-google"></i></span>
-                    <span class="mx-2"><i class="fab fa-instagram"></i></span>
-                    <span class="mx-2"><i class="fab fa-linkedin"></i></span>
-                    <span class="mx-2"><i class="fab fa-github"></i></span>
-                </div>
-                <div class="row pt-4" id="footer-links">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5>CYBER PHONE</h5>
-                        <p>
-                            We pride ourselves on our efficiency and hard work,
-                            but most of all our ability to source you the best
-                            quality and best value products and devices in the
-                            market.
-                        </p>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5>BRANDS</h5>
-                        <ul>
-                            <li><a href="#">iPhone</a></li>
-                            <li><a href="#">Sumsung</a></li>
-                            <li><a href="#">Xiaomi</a></li>
-                            <li><a href="#">Oppo</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5>USEFUL LINKS</h5>
-                        <ul>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Orders</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5>CONTACT</h5>
-                        <ul>
-                            <li>
-                                <i class="fa fa-home mr-4"></i
-                                ><span>Da Nang, Thanh Khe, VN</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope mr-4"></i
-                                ><span>cyberphone@mail.com</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-phone mr-4"></i
-                                ><span>+ 01 234 567 88</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-phone mr-4"></i
-                                ><span>+ 01 234 567 89</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row justify-content-center pt-2">
+            <div class="row pt-4" id="footer-links">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>CYBER PHONE</h5>
                     <p>
-                        © 2022 Copyright:
-                        <a href="../../index.html">Cyber Phone</a>
+                        We pride ourselves on our efficiency and hard work,
+                        but most of all our ability to source you the best
+                        quality and best value products and devices in the
+                        market.
                     </p>
                 </div>
-            </div>
-        </section>
 
-        <!-- Modal -->
-        <section>
-            <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-            >
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                Modal title
-                            </h5>
-                            <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>BRANDS</h5>
+                    <ul>
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">Sumsung</a></li>
+                        <li><a href="#">Xiaomi</a></li>
+                        <li><a href="#">Oppo</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>USEFUL LINKS</h5>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>CONTACT</h5>
+                    <ul>
+                        <li>
+                            <i class="fa fa-home mr-4"></i><span>Da Nang, Thanh Khe, VN</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope mr-4"></i><span>cyberphone@mail.com</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone mr-4"></i><span>+ 01 234 567 88</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone mr-4"></i><span>+ 01 234 567 89</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center pt-2">
+                <p>
+                    © 2022 Copyright:
+                    <a href="../../index.html">Cyber Phone</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Modal title
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="">ID</label>
+                            <input type="text" class="form-control" id="p-id" placeholder="" />
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="">ID</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="p-id"
-                                    placeholder=""
-                                />
-                            </div>
-                            <div class="form-group">
-                                <label for="">Tên</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="p-name"
-                                    placeholder=""
-                                />
-                                <span class="text-danger" id="name-err"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Hình ảnh</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="p-img"
-                                    placeholder=""
-                                />
-                                <span class="text-danger" id="img-err"></span>
-                            </div>
-                            <div class="input-group">
-                                <select class="custom-select" id="p-type">
-                                    <option disabled selected value="">
-                                        Chọn...
-                                    </option>
-                                    <option value="Apple">Apple</option>
-                                    <option value="Samsung">Samsung</option>
-                                </select>
-                                <div class="input-group-append">
-                                    <label
-                                        class="input-group-text"
-                                        for="inputGroupSelect02"
-                                        >Hãng</label
-                                    >
-                                </div>
-                            </div>
-                            <p class="text-danger" id="type-err"></p>
-                            <div class="input-group">
-                                <select class="custom-select" id="p-screen">
-                                    <option disabled selected value="">
-                                        Chọn...
-                                    </option>
-                                    <option value="Screen 68">68</option>
-                                    <option value="Screen 69">69</option>
-                                    <option value="Screen 70">70</option>
-                                </select>
-                                <div class="input-group-append">
-                                    <label
-                                        class="input-group-text"
-                                        for="inputGroupSelect02"
-                                        >Kích thước màn hình</label
-                                    >
-                                </div>
-                            </div>
-                            <p class="text-danger" id="screen-err"></p>
-                            <div class="form-group">
-                                <label for="">Camera trước</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="p-front-camera"
-                                    placeholder=""
-                                />
-                                <span
-                                    class="text-danger"
-                                    id="front-camera-err"
-                                ></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Camera sau</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="p-back-camera"
-                                    placeholder=""
-                                />
-                                <span
-                                    class="text-danger"
-                                    id="back-camera-err"
-                                ></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Mô tả</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="p-desc"
-                                    placeholder=""
-                                />
-                                <span class="text-danger" id="desc-err"></span>
+                        <div class="form-group">
+                            <label for="">Tên</label>
+                            <input type="text" class="form-control" id="p-name" placeholder="" />
+                            <span class="text-danger" id="name-err"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hình ảnh</label>
+                            <input type="text" class="form-control" id="p-img" placeholder="http" />
+                            <span class="text-danger" id="img-err"></span>
+                        </div>
+                        <div class="input-group">
+                            <select class="custom-select" id="p-type">
+                                <option disabled selected value="">
+                                    Chọn...
+                                </option>
+                                <option value="Apple">Apple</option>
+                                <option value="Samsung">Samsung</option>
+                            </select>
+                            <div class="input-group-append">
+                                <label class="input-group-text" for="inputGroupSelect02">Hãng</label>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-dismiss="modal"
-                            >
-                                Close
-                            </button>
-                            <button
-                                type="button"
-                                class="btn btn-info d-none"
-                                id="updateBtn"
-                                onclick="update()"
-                            >
-                                Save changes
-                            </button>
-                            <button
-                                type="button"
-                                class="btn btn-info"
-                                id="addBtn"
-                                onclick="add()"
-                            >
-                                Add
-                            </button>
+                        <p class="text-danger" id="type-err"></p>
+                        <div class="input-group">
+                            <select class="custom-select" id="p-screen">
+                                <option disabled selected value="">
+                                    Chọn...
+                                </option>
+                                <option value="Screen 68">68</option>
+                                <option value="Screen 69">69</option>
+                                <option value="Screen 70">70</option>
+                            </select>
+                            <div class="input-group-append">
+                                <label class="input-group-text" for="inputGroupSelect02">Kích thước màn hình</label>
+                            </div>
                         </div>
+                        <p class="text-danger" id="screen-err"></p>
+                        <div class="form-group">
+                            <label for="">Camera trước</label>
+                            <input type="text" class="form-control" id="p-front-camera" placeholder="" />
+                            <span class="text-danger" id="front-camera-err"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Camera sau</label>
+                            <input type="text" class="form-control" id="p-back-camera" placeholder="" />
+                            <span class="text-danger" id="back-camera-err"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mô tả</label>
+                            <input type="text" class="form-control" id="p-desc" placeholder="" />
+                            <span class="text-danger" id="desc-err"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-info d-none" id="updateBtn" onclick="update()">
+                            Save changes
+                        </button>
+                        <button type="button" class="btn btn-info" id="addBtn" onclick="add()">
+                            Add
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"
-        ></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-        <!-- axios -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
-            integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <!-- admin js -->
-        <!-- <script src="../controller/controller.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+        integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- admin js -->
+    <!-- <script src="../controller/controller.js"></script>
         <script src="../model/model.js"></script> -->
-        <script type="module" src="../view/main.js"></script>
+    <script type="module" src="../view/main.js"></script>
 
-        <!-- index.js -->
-        <script src="../../asset/js/index.js"></script>
-    </body>
+    <!-- index.js -->
+    <script src="../../asset/js/index.js"></script>
+</body>
+
 </html>

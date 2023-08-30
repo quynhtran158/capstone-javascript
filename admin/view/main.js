@@ -17,7 +17,7 @@ import {
     toggleSpinner,
 } from "../controller/controller.js";
 
-import { isValidName, isNotBlank } from "../validation/validate.js";
+import { isValidName, isValidImg, isNotBlank } from "../validation/validate.js";
 
 fetchProductList()
 
@@ -27,7 +27,7 @@ window.add = () => {
     let newPhone = getDataForm()
 
     let isValid = (isValidName("name-err", newPhone.name)
-        & isNotBlank("img-err", newPhone.img)
+        & isValidImg("img-err", newPhone.img)
         & isNotBlank("type-err", newPhone.type)
         & isNotBlank("screen-err", newPhone.screen)
         & isNotBlank("front-camera-err", newPhone.frontCamera)
@@ -92,7 +92,7 @@ window.update = () => {
     let data = getDataForm()
 
     let isValid = (isValidName("name-err", data.name)
-        & isNotBlank("img-err", data.img)
+        & isValidImg("img-err", data.img)
         & isNotBlank("type-err", data.type)
         & isNotBlank("screen-err", data.screen)
         & isNotBlank("front-camera-err", data.frontCamera)

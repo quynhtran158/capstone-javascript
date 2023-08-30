@@ -31,14 +31,14 @@ const renderList = (phoneList) => {
             <img src=${ele.img} class="card-img" alt="Phone Image" />
             <div class="content-details fadeIn-top">
                 <h3 class='pb-5'>Specifications</h3>
-                <div class="d-flex justify-content-start py-1">
+                <div class="text-left py-1">
                     <span class='text-light'><b>Screen:</b></span>
-                    <span class='text-light'>&nbsp ${ele.screen}</span>
+                    <span class='text-light'> ${ele.screen}</span>
                 </div>
-                <div class="d-flex justify-content-start py-1">
+                <div class="text-left py-1">
                     <span class='text-light'><b>Back Camera:</b> ${ele.backCamera}</span>
                 </div>
-                <div class="d-flex justify-content-start py-1">
+                <div class="text-left py-1">
                     <span class='text-light'><b>Front Camera:</b> ${ele.frontCamera}</span>
                 </div>
 
