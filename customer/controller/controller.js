@@ -30,7 +30,7 @@ const renderList = (phoneList) => {
             <div class="content-overlay"></div>
             <img src=${ele.img} class="card-img" alt="Phone Image" />
             <div class="content-details fadeIn-top">
-                <h3 class='pb-5'>Specifications</h3>
+                <h3 class='pb-5'>Specification</h3>
                 <div class="text-left py-1">
                     <span class='text-light'><b>Screen:</b></span>
                     <span class='text-light'> ${ele.screen}</span>
