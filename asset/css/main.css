@@ -216,6 +216,14 @@ li {
 .body#admin-body #search {
   border-radius: 5px;
 }
+.body#admin-body table tr th:nth-child(4),
+.body#admin-body table tbody tr td:nth-child(4) {
+  max-width: 300px;
+  min-width: 100px;
+  line-break: anywhere;
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+}
 
 .header {
   position: relative;

@@ -24,14 +24,14 @@ export const renderProductTable = (list) => {
     list.forEach(item => {
         tableHtml += `
             <tr>
-                <td>${item.id}</td>
+                <th scope="row">${item.id}</th>
                 <td>${item.name}</td>
-                <td>${item.price}</td>
+                <td>${item.price.toLocaleString()}</td>
                 <td>${item.img}</td>
                 <td>${item.desc}</td>
                 <td>
-                    <button class="btn btn-warning" onclick="edit(${item.id})">Sửa</button>
-                    <button class="btn btn-danger" onclick="deletePhone(${item.id})">Xóa</button>
+                    <button class="btn btn-warning mb-1" onclick="edit(${item.id})">Sửa</button>
+                    <button class="btn btn-danger mb-1" onclick="deletePhone(${item.id})">Xóa</button>
                 </td>
             </tr>
         `
